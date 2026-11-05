@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+
+  <script>
+
+    function showBox(){
+      document.querySelector('.box').style.display = 'block';
+    }
+
+    function hiddenBox(){
+      document.querySelector('.box').style.display = 'none';
+    } //팝업창 기능 (인라인 방식의 이벤트 처리 방법 - React에서는 필수 기능)
+
+
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      const showBtn = document.querySelector('.show_btn');
+      const hiddenBtn = document.querySelector('.hidden_btn');
+      const textBox = document.querySelector('.box');
+/*
+      showBtn.addEventListener('click', function(){
+        textBox.style.display = 'block';
+      });
+
+      hiddenBtn.addEventListener('click', () => {
+        textBox.style.display = 'none';
+      });
+*/
+
+      showBtn.onclick = showBox;
+      hiddenBtn.onclick = hiddenBox;
+
+      // function showBox(){
+      //   textBox.style.display = 'block';
+      // }
+      // function hiddenBox(){
+      //   textBox.style.display = 'none';
+      // }
+
+    }); //DOMContentLoaded
+
+  </script>
+
+  <style>
+
+    .box{
+      width: 300px; height: 300px;
+      border: 1px solid black;
+      background-color: #eee;
+      font-size: 30px;
+      text-align: center;
+      line-height: 300px;
+      display: none;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <!-- <button class="show_btn" onclick="showBox()">Show</button>
+  <button class="hidden_btn" onclick="hiddenBox()">Hidden</button>  -->
+  <!-- 인라인 방식으로 넣음 -->
+
+  <button class="show_btn">Show</button>
+  <button class="hidden_btn">Hidden</button> 
+
+  <p class="box">Text_box</p>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+/*---------탭 기능-----------*/
+#notice_btn, #event_btn{display: none;}
+
+#notice_btn:checked ~ .notice_tab_box .btn_notice,
+#event_btn:checked ~ .notice_tab_box .btn_event{
+  border-bottom: 3px solid #B94040;
+}
+
+#notice_btn:checked ~ .notice_page{display: block;}
+#notice_btn:checked ~ .event_page{display: none;}
+#event_btn:checked ~ .notice_page{display: none;}
+#event_btn:checked ~ .event_page{display: block;}
+
+/*---------탭 기능-----------*/
+
+.all_notice_box{
+  width: 100%;
+}
+.all_notice_box .notice_tab_box{
+  width: 1070px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  gap: 50px;
+}
+.all_notice_box .notice_tab_box label{
+  padding-bottom: 3px;
+  border-bottom: 3px solid white;
+  cursor: pointer;
+}
+
+/*-----------notice_content-------------*/
+
+.notice_page,
+.event_page{
+  width: 1070px;
+  margin: 0 auto;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.pin_list{
+  margin-bottom: 50px;
+  border-top: 1px solid #ccc;
+}
+.notice_page p,
+.event_page p{
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.notice_page .pin_list li,
+.event_page .pin_list li{
+  width: 1070px;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+.notice_page .pin_list li summary,
+.event_page .pin_list li summary{
+  cursor: pointer;
+}
+.pin i{
+  margin: 0 10px;
+}
+.text_body{
+  margin: 20px;
+}
+
+/*----------list_content_box---------------*/
+
+.list_content_box{
+  margin-bottom: 100px;
+}
+.list_content_box li{
+  width: 1070px; 
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px 0;
+  line-height: 25px;
+}
+.list_content_box li summary{
+  cursor: pointer;
+}
+.title_tag{
+  font-weight: 500;
+  margin-right: 20px;
+}
+.text_title summary span:last-child,
+.list_content_box summary span:last-child{
+  float: right;
+  font-size: 12px;
+}
+
+/*------------page_btn_box----------------*/
+
+.page_btn_box{
+  width: 1070px;
+  margin: 0 auto 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page_btn_box div{
+  margin: 0 10px;
+}
+.page_btn_number a{
+  display: block;
+  width: 30px; height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1.5px solid black;
+}
+

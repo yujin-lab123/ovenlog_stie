@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript_더보기버튼</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      const btn = document.querySelector('.btn');
+      const detailText = document.querySelector('.detail_text');
+      let isOpen = false; //true/false를 가지는 변수는 변수앞에 is를 붙여줌.(규칙은 아님. let state = true/false;를 많이 쓰기도 함.)
+
+      btn.addEventListener('click', function(){
+
+        if(isOpen === false){
+          detailText.style.display = 'block';
+          btn.textContent = '상세설명닫기';
+          isOpen = true;
+        }else{
+          detailText.style.display = 'none';
+          btn.textContent = '상세설명보기';
+          isOpen = false;
+        }
+      });
+
+
+    }); //DOMContentLoaded
+
+  </script>
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    .detail{
+      width: 500px;
+    }
+    .detail .detail_img img{
+      display: block;
+      width: 100%;
+    }
+    .detail .detail_text{
+      display: none;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+<div class="detail">
+  <div class="detail_img">
+    <img src="./images/Flower_10.jpg" alt="대표 이미지">
+  </div>
+
+  <div class="detail_text">
+    <h3>Front_End</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.</p>
+  </div>
+
+  <button class="btn">상세설명보기</button>
+</div>
+
+</body>
+</html>

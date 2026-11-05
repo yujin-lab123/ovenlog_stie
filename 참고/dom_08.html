@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript_클릭 시 해당 이미지 변경</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+      const mainImg = document.querySelector('.main_img > img');
+      const thumImg = document.querySelectorAll('.thum_img > li'); //2개이상이나까 querySelectorAll
+
+      for(let i in thumImg){
+        thumImg[i].onclick = mainBox;
+      }//in:배열 안에서만 사용
+
+      function mainBox(){
+        let imgSrc = this.children[0].src;
+        mainImg.setAttribute('src', imgSrc);
+      } //복잡한 코드진행이 되면 서브function사용.(이걸 많이 씀)
+
+/*
+      for(let i=0; i<thumImg.length; i++){
+        thumImg[i].addEventListener('click', function(){
+          mainImg.src = this.children[0].src
+        });
+      } 단순하게 짧은 코드는 이렇게.
+*/
+
+
+
+
+    }); //DOMContentLoaded
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+    li{list-style: none;}
+    img{display: block; width: 100%; height: auto;}
+
+    .container{
+      width: 500px;
+    }
+    .container .thum_img{
+      display: flex;
+      padding: 5px 0;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+<div class="container">
+  <h3>프론트엔드</h3>
+  <div class="main_img">
+    <img src="./images/spring_on.jpg" alt="main_img">
+  </div>
+
+  <ul class="thum_img">
+    <li><img src="./images/spring_on.jpg" alt="thumnail_img01"></li>
+    <li><img src="./images/summer_on.jpg" alt="thumnail_img02"></li>
+    <li><img src="./images/autumn_on.jpg" alt="thumnail_img03"></li>
+  </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오븐로그 | 오븐에서 갓 구운빵_마이페이지</title>
+  <link rel="shortcut icon" href="./images/icon/olvenlog-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/mypage.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/sub_page.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+  <script src="./script.js"></script>
+  <style>
+    /*----------------------- default setting    --------------------------*/
+    *{margin: 0; padding: 0;}
+    li{list-style: none;}
+    a{color: black; text-decoration: none;}
+    img{display: block; width: 100%; height: auto;}
+
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-Light.subset.woff2);
+      font-weight: 300;
+    }
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-Regular.subset.woff2);
+      font-weight: 400;
+    }
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-Medium.subset.woff2);
+      font-weight: 500;
+    }
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-SemiBold.subset.woff2);
+      font-weight: 600;
+    }
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-Bold.subset.woff2);
+      font-weight: 700;
+    }
+    /*----------------------- default setting    --------------------------*/
+    
+  </style>
+</head>
+<body>
+<header class="header">
+    <div class="header_box">
+      <div class="gnb_top_box">
+      <ul>
+        <li><a href="#!">로그인</a></li>
+        <li class="join"><a href="#!">회원가입</a>
+          <span class="join_event">+1000원</span>
+        </li>
+        <li><a href="./mypage.html">주문조회</a></li>
+        <li><a href="#!">고객센터</a></li>
+        <li class="shopping_cart"><a href="./mypage.html"><img src="./images/icon/shopping-bag_b1.png" alt="장바구니"></a></li>
+        <li><a href="./mypage.html"><img src="./images/icon/user1.png" alt="마이페이지"></a></li>
+      </ul>
+    </div>
+    
+    <div class="header_center_box">
+      <div class="search_box_top">
+          <input type="search" placeholder="어니언 베이글">
+          <div>
+            <a href="#!">
+              <img src="./images/icon/loupe.png" alt="돋보기">
+            </a>
+          </div>
+        </div>
+
+      <div class="logo_box">
+      <a href="./index.html">
+      <img src="./images/icon/ovenlog_logo2.jpg" alt="로고">
+      </a>
+      </div>
+
+      <div class="hotkey_box">
+          <ul>
+              <li><a href="#!">
+                <span class="rank">1.</span>
+                <span class="keyword">두바이쫀득쿠키</span>
+                <span class="rank_up">
+                <span>▲</span>
+                <span>98</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">2.</span>
+                <span class="keyword">딸기생크림샌드위치</span>
+                <span class="rank_down">
+                <span>▼</span>
+                <span>2</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">3.</span>
+                <span class="keyword">상하이버터떡</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">4.</span>
+                <span class="keyword">누텔라크로와상</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">5.</span>
+                <span class="keyword">레터링케이크</span>
+                <span class="rank_up">
+                <span>▲</span>
+                <span>15</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">6.</span>
+                <span class="keyword">소금빵</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">7.</span>
+                <span class="keyword">어니언베이글</span>
+                <span class="rank_down">
+                <span>▼</span>
+                <span>8</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">8.</span>
+                <span class="keyword">바질페스토샌드위치</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">9.</span>
+                <span class="keyword">우베무스케이크</span>
+                <span class="rank_up">
+                <span>▲</span>
+                <span>7</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">10.</span>
+                <span class="keyword">애플파이</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span> 
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">1.</span>
+                <span class="keyword">두바이쫀득쿠키</span>
+                <span class="rank_up">
+                <span>▲</span>
+                <span>98</span>
+                </span>
+              </a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+<!-------/header_center_box------>
+
+    <nav class="gnb_box">
+      <ul>
+        <li class="ham_bar"><img class="ham_bar_on" src="./images/icon/main_bar.png" alt="햄버거바">
+          <div class="all_menu_box">
+            <div class="all_menu_left">
+              <div class="all_menu_list">
+                <div class="all_menu_category">
+                  <p><a href="#!">수제 빵🍞</a></p>
+                    <ul class="all_bread">
+                      <li><a href="">수제빵</a></li>
+                      <li><a href="#!">바게트</a></li>
+                      <li><a href="#!">식빵</a></li>
+                      <li><a href="#!">파이</a></li>
+                      <li><a href="#!">페스츄리</a></li>
+                      <li><a href="#!">건강빵(비건빵)</a></li>
+                      <li><a href="#!">샌드위치</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="#!">수제 과자🍪</a></p>
+                    <ul class="all_cookie">
+                      <li><a href="#!">단품쿠키</a></li>
+                  <li><a href="#!">쿠키슈</a></li>
+                  <li><a href="#!">마카롱</a></li>
+                  <li><a href="#!">브라우니</a></li>
+                  <li><a href="#!">스콘&머핀</a></li>
+                  <li><a href="#!">마들렌&휘낭시에</a></li>
+                  <li><a href="#!">쿠키세트</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="#!">수제 케이크🍰</a></p>
+                    <ul class="all_cake">
+                      <li><a href="#!">조각케이크</a></li>
+                  <li><a href="#!">홀케이크</a></li>
+                  <li><a href="#!">롤케이크</a></li>
+                  <li><a href="#!">레터링 케이크</a></li>
+                  <li><a href="#!">파운드 케이크</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="#!">수제 초콜릿🍫</a></p>
+                    <ul class="all_chocolate">
+                      <li><a href="#!">수제 초콜릿</a></li>
+                  <li><a href="#!">파베 초콜릿</a></li>
+                  <li><a href="#!">아망드 쇼콜라</a></li>
+                  <li><a href="#!">저당 초콜릿</a></li>
+                  <li><a href="#!">초콜릿 선물 세트</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="./sub_page.html" style="color: blue;">갓구움🔥</a></p>
+                  <ul class="all_custom">
+                      <li><a href="./sub_page.html" style="color: blue;">갓구움🔥</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="#!">맞춤추천</a></p>
+                    <ul class="all_custom">
+                      <li><a href="#!">답례품용</a></li>
+                  <li><a href="#!">생일/이벤트용</a></li>
+                  <li><a href="#!">피크닉용</a></li>
+                  <li><a href="#!">비건/저당용</a></li>
+                  <li><a href="#!">간식용</a></li>
+                  <li><a href="#!">식사대용</a></li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="all_menu_bottom_box">
+                <span><a href="#!">선물하기</a></span>
+                <span><a href="#!">정기배송</a></span>
+                <span><a href="#!">대량구매</a></span>
+              </div>
+            </div>
+
+            <div class="all_menu_right">
+              <div class="all_menu_content">
+                <p>NEW</p>
+                <div class="a_m_content">
+                  <a href="#!">
+                    <div class="a_m_img">
+                      <img src="./images/icon/header_new01.jpg" alt="상하이버터떡">
+                    </div>
+                    <div class="a_m_text">
+                      <p>상하이<br>버터떡</p>
+                      <p>(click)</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="a_m_content">
+                  <a href="#!">
+                    <div class="a_m_img">
+                      <img src="./images/icon/header_new02.jpg" alt="딸기생크림샌드위치">
+                    </div>
+                    <div class="a_m_text">
+                      <p>딸기 생크림<br>샌드위치</p>
+                      <p>(click)</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="all_menu_content">
+                <p>BEST</p>
+                <div class="a_m_content">
+                  <a href="#!">
+                    <div class="a_m_img">
+                      <img src="./images/icon/header_best01.jpg" alt="두바이쫀득모찌빵">
+                    </div>
+                    <div class="a_m_text">
+                      <p>두바이<br>쫀득 모찌빵</p>
+                      <p>(click)</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="a_m_content">
+                  <a href="#!">
+                    <div class="a_m_img">
+                      <img src="./images/icon/header_best02.jpg" alt="과일롤케이크">
+                    </div>
+                    <div class="a_m_text">
+                      <p>5가지<br>과일 롤케이크</p>
+                      <p>(click)</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </li>
+        <li class="gnb_bread"><a href="#!">수제 빵</a>
+          <ul class="sub_gnb">
+            <li><a href="./sub_page.html">수제빵</a></li>
+            <li><a href="#!">바게트</a></li>
+            <li><a href="#!">식빵</a></li>
+            <li><a href="#!">파이</a></li>
+            <li><a href="#!">페스츄리</a></li>
+            <li><a href="#!">건강빵(비건빵)</a></li>
+            <li><a href="#!">샌드위치</a></li>
+          </ul>
+        </li>
+        <li class="gnb_cookie"><a href="#!">수제 쿠키</a>
+          <ul class="sub_gnb">
+            <li><a href="#!">단품쿠키</a></li>
+            <li><a href="#!">쿠키슈</a></li>
+            <li><a href="#!">마카롱</a></li>
+            <li><a href="#!">브라우니</a></li>
+            <li><a href="#!">스콘&머핀</a></li>
+            <li><a href="#!">마들렌&휘낭시에</a></li>
+            <li><a href="#!">쿠키세트</a></li>
+          </ul>
+        </li>
+        <li class="gnb_cake"><a href="#!">수제 케이크</a>
+          <ul class="sub_gnb">
+            <li><a href="#!">조각케이크</a></li>
+            <li><a href="#!">홀케이크</a></li>
+            <li><a href="#!">롤케이크</a></li>
+            <li><a href="#!">레터링 케이크</a></li>
+            <li><a href="#!">파운드 케이크</a></li>
+          </ul>
+        </li>
+        <li class="gnb_choco"><a href="#!">수제 초콜릿</a>
+          <ul class="sub_gnb">
+            <li><a href="#!">수제 초콜릿</a></li>
+            <li><a href="#!">파베 초콜릿</a></li>
+            <li><a href="#!">아망드 쇼콜라</a></li>
+            <li><a href="#!">저당 초콜릿</a></li>
+            <li><a href="#!">초콜릿 선물세트</a></li>
+          </ul>
+        </li>
+        <li class="gnb_gotguum"><a href="./sub_page.html">갓구움🔥</a>
+        </li>
+        <li class="gnb_custom"><a href="#!">맞춤추천</a>
+          <ul class="sub_gnb">
+            <li><a href="#!">답레품용</a></li>
+            <li><a href="#!">생일/이벤트용</a></li>
+            <li><a href="#!">피크닉용</a></li>
+            <li><a href="#!">비건/저당용</a></li>
+            <li><a href="#!">간식용</a></li>
+            <li><a href="#!">식사대용</a></li>
+          </ul>
+        </li>
+        <li>        
+        <div class="search_box">
+          <input type="search" placeholder="어니언 베이글">
+          <div>
+            <a href="#!">
+              <img src="./images/icon/loupe.png" alt="돋보기">
+            </a>
+          </div>
+        </div>
+        </li>
+      </ul>
+    </nav>
+   </header>
+<!------------------/header------------------>
+
+<section class="side_quick_menu" id="sub_page_top">
+  <div class="home_icon">
+    <a href="./index.html">
+    <img src="./images/icon/home.png" alt="메인홈">
+    </a>
+  </div>
+  <div class="sub_menu_angle">
+    <img src="./images/icon/sub_menu.png" alt=">">
+  </div>
+  <p>마이페이지</p>
+</section>
+
+<!----------/side_quick_menu--------------->
+
+<section class="wrap">
+
+  <div class="sub_title">마이페이지</div>
+  <div class="mypage_main">
+    
+
+    <div class="mypage_profile_box">
+      <div class="profile_img">
+        <img src="./images/icon/profile.png" alt="프로필사진">
+      </div>
+      <div class="mypage_hello">
+        <p>안녕하세요!</p>
+        <span>간장콩빵</span>
+        <span>님</span>
+      </div>
+    </div>
+
+    <div class="mypage_point_box">
+      <div class="point_box">
+        <div class="point">
+          <i class="fa-solid fa-coins"></i>
+          <span>1,230</span>
+        </div>
+        <div class="grade">
+          <span>현재등급</span>
+          <span>VIP</span>
+        </div>
+      </div>
+      <div class="grade_map">
+        <img src="./images/icon/mypage_grademap.png" alt="현재등급표">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!--------------------------------------->
+
+<section class="mypage_content_box">
+  <div class="mypage_content">
+    <div class="mypage_title">
+      <span>즐겨찾기</span>
+      <span>(1)</span>
+      <span class="more"><a href="#!">더보기 ></a></span>
+    </div>
+    <div class="mp_content">
+      <a href="./detail_page.html">
+        <div class="mp_con_img">
+        <img src="./images/best/best08.jpg" alt="즐겨찾기1">
+      </div>
+      <div class="mp_con_text">
+        <p>[냉동배송🧊][선물추천💝] <br> 건조과일 수제 판초콜릿 3종 1세트</p>
+        <span class="old_price">21,500원</span>
+        <span class="new_price">20,000원</span>
+      </div>
+      </a>
+      <div class="history_btn_box">
+        <a href="#!">즐겨찾기 해제</a>
+        <a href="#!">바로 주문</a>
+        <a href="#!">장바구니</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mypage_content">
+    <div class="mypage_title">
+      <span>정기배송중</span>
+      <span>(2)</span>
+      <span class="more"><a href="#!">수정하기 ></a></span>
+    </div>
+    <div class="mp_content">
+      <a href="./detail_page.html">
+        <div class="mp_con_img">
+        <img src="./images/best/best54.jpg" alt="정기배송1">
+      </div>
+      <div class="mp_con_text">
+        <p>[갓구움🔥][비건🍀] <br> 우리밀 치아바타 20개입 1세트</p>
+        <span class="old_price">63,000원</span>
+        <span class="new_price">58,000원</span>
+      </div>
+      </a>
+      <div class="history_btn_box">
+        <a href="#!">정기배송 수정</a>
+        <a href="#!">배송 내역</a>
+        <a href="#!">장바구니</a>
+      </div>
+    </div>
+    <div class="mp_content">
+      <a href="#!">
+        <div class="mp_con_img">
+        <img src="./images/best/best49.jpg" alt="정기배송2">
+      </div>
+      <div class="mp_con_text">
+        <p>[갓구움🔥][간식추천] <br> 휘낭시에 6개입 1세트 (4가지맛)</p>
+        <span class="old_price">10,000원</span>
+        <span class="new_price">9,500원</span>
+      </div>
+      </a>
+      <div class="history_btn_box">
+        <a href="#!">정기배송 수정</a>
+        <a href="#!">배송 내역</a>
+        <a href="#!">장바구니</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mypage_content">
+    <div class="mypage_title">
+      <span>나의 구매내역</span>
+      <span class="more"><a href="#!">더보기 ></a></span>
+    </div>
+    
+    <div class="older_history">
+      <div class="mp_content">
+      <a href="./detail_page.html">
+      <div class="mp_con_img">
+        <img src="./images/best/best54.jpg" alt="구매내역1">
+      </div>
+      <div class="mp_con_text">
+        <span class="mp_day">2025.04.01</span>
+        <p class="mp_minititle">[갓구움🔥][비건🍀] <br> 우리밀 치아바타 20개입 1세트</p>
+        <span class="mp_old_price">63,000원</span>
+        <span class="mp_new_price">58,000원</span>
+        <span>(배송완료)</span>
+      </div>
+      </a>
+      <div class="history_btn_box">
+        <a href="#!">리뷰쓰기</a>
+        <a href="#!">수취확인</a>
+        <a href="#!">장바구니</a>
+      </div>
+    </div>
+
+    <div class="mp_content">
+      <a href="#!">
+        <div class="mp_con_img">
+        <img src="./images/best/best49.jpg" alt="구매내역2">
+      </div>
+      <div class="mp_con_text">
+        <span class="mp_day">2025.03.28</span>
+        <p class="mp_minititle">[갓구움🔥][간식추천] <br> 휘낭시에 6개입 1세트 (4가지맛)</p>
+        <span class="old_price">10,000원</span>
+        <span class="new_price">9,500원</span>
+        <span>(배송완료)</span>
+      </div>
+      </a>
+      <div class="history_btn_box">
+        <a href="#!">리뷰쓰기</a>
+        <a href="#!">수취확인</a>
+        <a href="#!">장바구니</a>
+      </div>
+    </div>
+
+    <div class="mp_content">
+      <a href="#!">
+        <div class="mp_con_img">
+        <img src="./images/best/best32.jpg" alt="구매내역3">
+      </div>
+      <div class="mp_con_text">
+        <span class="mp_day">2025.03.03</span>
+        <p class="mp_minititle">[냉동배송🧊][선물추천💝] <br> 딸기 빅토리아 홀케이크</p>
+        <span class="old_price">31,000원</span>
+        <span class="new_price">29,450원</span>
+        <span>(배송완료)</span>
+      </div>
+      </a>
+      <div class="history_btn_box">
+        <a href="#!">리뷰쓰기</a>
+        <a href="#!">수취확인</a>
+        <a href="#!">장바구니</a>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="mypage_content">
+    <div class="mypage_title">
+      <span>장바구니</span>
+      <span>(2)</span>
+      <span class="more"><a href="#!">더보기 ></a></span>
+    </div>
+    <div class="mp_content">
+      <a href="./detail_page.html">
+        <div class="mp_con_img">
+        <img src="./images/best/best05.jpg" alt="장바구니1">
+      </div>
+      <div class="mp_con_text">
+        <p>[갓구움🔥] <br> 천일염 소금빵 1개</p>
+        <span class="old_price">16,000원</span>
+        <span class="new_price">20,000원</span>
+      </div>
+      </a>
+      <div class="history_btn_box">
+        <a href="#!">주문수량 수정</a>
+        <a href="#!">바로 주문</a>
+        <a href="#!">장바구니</a>
+      </div>
+    </div>
+    <div class="mp_content">
+      <a href="#!">
+        <div class="mp_con_img">
+        <img src="./images/best/best48.jpg" alt="장바구니2">
+      </div>
+      <div class="mp_con_text">
+        <p>[냉동배송🧊]<br>피크닉 브런치 밀키트</p>
+        <span class="old_price">32,000원</span>
+        <span class="new_price">25,600원</span>
+      </div>
+      </a>
+      <div class="history_btn_box">
+        <a href="#!">주문수량 수정</a>
+        <a href="#!">바로 주문</a>
+        <a href="#!">장바구니</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!------------------------------------>
+
+<!------------footer--------------------->
+<footer class="footer">
+<div class="footer_box">
+  <div class="footer_left">
+    <div class="footer_logo">
+      <img src="./images/icon/ovenlog_logo2.jpg" alt="로고">
+    </div>
+    <p>법인명(상호): (주)오븐로그 | 주소: 02518 부산광역시 해운구 마린로 3길 베이킹산업센터 704호 오븐로그</p>
+    <p>대표자: 정유진 | 전화: 1588-7984 | 개인정보관리책임자: 정유진(cxgo@engin.kr)</p>
+    <p>사업자등록번호 264-87-42885 | 통신판매업신고 제 2025-해운마린-00652호<a href="#!">[사업자정보확인]</a></p>
+    <p>Copyright © 오븐로그. All right reserved.</p>
+    <p>고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG사의 구매안전 서비스를 이용하실 수 있습니다.<a href="#!">[서비스 가입사실 확인]</a></p>
+
+    <div class="footer_btn">
+      <span><a href="#!">단체주문·대량구매 관련 문의 ></a></span>
+      <span><a href="#!">정기배송·선물하기 관련 문의></a></span>
+    </div>
+  </div>
+
+  <div class="footer_right">
+    <p>| 고객센터</p>
+    <p>1588-7984</p>
+    <p>평일: 09:00 ~ 17:00</p>
+    <p>점심시간: 12:30 ~ 13:30</p>
+    <p>(주말 및 공휴일은 휴무입니다.)</p>
+  </div>
+</div>
+
+</footer>
+<!------------/footer--------------------->
+
+<aside class="bottom_cart">
+  <input type="checkbox" id="bt_cart_on">
+
+  <label for="bt_cart_on"  class="bt_cart_text">
+    <span>장바구니</span>
+    <span><i class="fa-solid fa-chevron-down"></i></span>
+  </label>
+
+    <div class="bt_cart_content">
+    <div class="bt_cart_content_box">
+      <input type="checkbox" id="all_select">
+      <div>
+
+        <div class="bt_c_c_s_text">
+          <label for="all_select">
+            <i class="fa-regular fa-circle-check"></i>
+          </label>
+          <span>전체선택</span>
+          <span>선택삭제</span>
+          <span>전체삭제</span>
+        </div>
+
+      <div class="bt_c_c_s_product">
+        <input type="checkbox" name="product_select" id="product_select01">
+
+        <div class="cart_product">
+          <label for="product_select01">
+            <i class="fa-regular fa-circle-check"></i>
+          </label>
+          <div class="cart_product_img">
+            <a href="./detail_page.html">
+              <img src="/images/cart/product (1).jpg" alt="카트01">
+            </a>
+          </div>
+          <div class="cart_product_text">
+            <i class="fa-solid fa-xmark"></i>
+            <p><a href="./detail_page.html">[갓구움🔥]<br>천일염 소금빵 1개</a></p>
+            
+            <div class="count_price_box">
+              <div class="coupon">
+                <a href="#!">
+                  <img src="./images/cart/coupon.png" alt="쿠폰">
+                </a>
+              </div>
+              <div class="count_box">
+                <button>-</button><span>5</span><button>+</button>
+              </div>
+              <div class="price">
+                <div class="old_price">16,000원</div>
+                <div class="new_price">15,200원</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bt_c_c_s_product">
+        <input type="checkbox" name="product_select" id="product_select02">
+
+        <div class="cart_product">
+          <label for="product_select02">
+            <i class="fa-regular fa-circle-check"></i>
+          </label>
+          <div class="cart_product_img">
+            <a href="./detail_page.html">
+              <img src="/images/cart/product (2).jpg" alt="카트02">
+            </a>
+          </div>
+          <div class="cart_product_text">
+            <i class="fa-solid fa-xmark"></i>
+            <p><a href="./detail_page.html">[냉동배송🧊]<br>피크닉 브런치 밀키트</a></p>
+            
+            <div class="count_price_box">
+              <div class="coupon">
+                <a href="#!">
+                  <img src="./images/cart/coupon.png" alt="쿠폰">
+                </a>
+              </div>
+              <div class="count_box">
+                <button>-</button><span class="count_num">1</span><button>+</button>
+              </div>
+              <div class="price">
+                <div class="old_price">32,000원</div>
+                <div class="new_price">25,600원</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="bt_cart_pay_box">
+        <div class="b_c_pay_box">
+          <p>결제예정금액</p>
+
+          <div class="pay_price">
+            <div>
+              <span>상품금액</span>
+              <span class="new_price">48,000원</span>
+            </div>
+            <div>
+              <span>배송비<span style="font-size: 10px;">(3만원 이상 무료배송)</span></span>
+              <span class="new_price">+3,000원</span>
+            </div>
+            <div>
+              <span>할인금액</span>
+              <span class="new_price">-4,200원</span>
+            </div>
+          </div>
+          <div class="total_price">
+            <span>총 결제예정금액</span>
+            <span class="new_price">43,800원</span>
+          </div>
+
+          <div class="pay_btn">
+            <p><a href="#!">주문하기</a></p>
+            <p><a href="#!"><img src="./images/cart/npay.png" alt="npay구매"></a></p>
+            <p><a href="#!">선물하기</a></p>
+            <p><a href="#!">정기배송</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<!---------/장바구니(bottom_cart)-------------->
+
+<!--사이드퀵메뉴-->
+
+<aside class="quick_menu">
+  <div class="quick_heart">
+    <a href="./mypage.html">
+    <img class="quick_heart_off" src="./images/icon/quick_heart.png" alt="즐겨찾기">
+    <img class="quick_heart_hover" src="./images/icon/quick_heart_click.png" alt="즐겨찾기hover">
+    </a>
+  </div>
+  <div class="quick_cart">
+    <a href="./mypage.html">
+    <img class="quick_cart_off" src="./images/icon/quick_cart.png" alt="장바구니">
+    <img class="quick_cart_hover" src="./images/icon/quick_cart_click.png" alt="장바구니hover">
+    </a>
+  </div>
+  <div class="viewed_item">
+    <p>Viewd</p>
+    <div>
+      <div class="viewed_item_img">
+      <a href="./detail_page.html">
+      <img src="./images/product_img/new (2).jpg" alt="에그타르트">
+      </a>
+      </div>
+      <div class="quick_btn">
+        <i class="fa-solid fa-angle-left"></i>
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+      <p style="font-size: 10px;">(1/3)</p>
+      <p><a href="./mypage.html">전체보기</a></p>
+    </div>
+  </div>
+
+  <div class="top_btn">
+    <a href="#sub_page_top">
+    <img src="./images/icon/top_btn.jpg" alt="top버튼">
+    </a>
+  </div>
+</aside>
+<!--/사이드퀵메뉴-->
+
+
+
+
+
+
+
+
+</body>
+</html>

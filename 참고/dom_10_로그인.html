@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      let id = 'green';
+      let pw = 'g1234';
+
+      let userId = document.querySelector('.user_id');
+      let userPw = document.querySelector('.user_pw');
+      let btnLog = document.querySelector('.btn_log');
+
+      let chkInfo = document.getElementById('chk_info');
+
+      chkInfo.addEventListener('click', () => {
+        if(chkInfo.checked === true){
+          document.getElementById('deli_name').value = document.getElementById('user_name').value;
+          document.querySelector('.deli_tel').value = document.querySelector('.user_tel').value;
+          document.getElementById('deli_addr').value = document.getElementById('user_addr').value;
+        }else{
+          document.getElementById('deli_name').value = '';
+          document.querySelector('.deli_tel').value = '';
+          document.getElementById('deli_addr').value = ''; 
+          /*텍스트 박스 안에 있는 '값'을 받고싶으면 value를 쓴다.*/
+        }
+      });
+
+      btnLog.addEventListener('click', () => {
+        if(userId.value === id){
+          if(userPw.value === pw){
+            alert('방문을 환영합니다.');
+          }else{
+            alert('암호가 틀렸습니다.');
+          }
+        }else{
+          alert('존재하지 않는 아이디입니다.');
+        }
+      });
+
+    }); //DOMContentLoaded
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+    hr{margin: 50px;}
+
+
+  </style>
+
+</head>
+<body>
+  
+<h1>로그인</h1>
+
+<form action="" name="logIn">
+  <div class="log_in">
+    <label for="">아이디: </label>
+    <input type="text" name="user_id" id="user_id" class="user_id" placeholder="아이디 입력" required autofocus>
+    <!-- name은 js에서 사용(지금은 거의 사용하지 않음) id나 class사용. (요즘 거의 class를 사용하는 게 트렌드지만 기능은 id로 줘야함)-->
+     <br>
+     <label for="">암호</label>
+     <input type="password" name="user_pw" id="user_pw" class="user_pw" placeholder="비밀번호 입력" required>
+     <br>
+     <button type="button" class="btn_log">로그인</button>
+  </div>
+</form><!--form : log_in-->
+
+<hr>
+
+<form action="" name="order">
+  <fieldset>
+    <legend>주문정보</legend>
+    <ul>
+      <li>
+        <label for="user_name">이름: </label>
+        <input type="text" id="user_name">
+      </li>
+      <li>
+        전화번호 : <input type="text" class="user_tel">
+      </li>
+      <li>
+        <label for="user_addr">주소: </label>
+        <input type="text" id="user_addr">
+      </li>
+    </ul>
+  </fieldset><!--주문정보-->
+
+  <fieldset>
+    <legend>배송정보</legend>
+    <ul>
+      <li>
+        <input type="checkbox" id="chk_info">
+        <label for="chk_info">주문정보와 배송정보가 같습니다.</label>
+      </li>
+      <li>
+        <label for="deli_name">이름: </label>
+        <input type="text" id="deli_name">
+      </li>
+      <li>
+        전화번호: <input type="text" class="deli_tel">
+      </li>
+      <li>
+        <label for="deli_addr">주소: </label>
+        <input type="text" id="deli_addr">
+      </li>
+    </ul>
+  </fieldset><!--배송정보-->
+
+</form><!--from: order-->
+
+</body>
+</html>

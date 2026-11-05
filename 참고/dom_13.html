@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      const fruits = document.selectForm.fruits;
+
+      fruits.addEventListener('change', () => {
+
+        let fruitsName = fruits.options[fruits.selectedIndex].innerText;
+        document.getElementById('name').value = fruitsName; /*input박스의 값은 value로 받아야함.*/
+      }); /*요즘 잘 안쓰는 구식 코드*/
+
+      const family = document.getElementById('family');
+
+      /*
+      family.addEventListener('change', function() {
+      
+      let option = this.options;
+      let index = option.selectedIndex;
+
+      location.href = option[index].value;
+      
+      });
+      */
+
+      family.addEventListener('change', function(event){
+      
+      let option = event.currentTarget.options; /*내가 선택한 현재의 값 = this = currentTarget*/
+      let index = option.selectedIndex;
+
+      location.href = option[index].value;
+      
+      });
+
+
+
+    }); //DOMContentLoaded
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+
+
+
+  </style>
+
+</head>
+<body>
+  
+  <form action="" name="selectForm">
+
+    <fieldset>
+      <legend>내가 좋아하는 것들</legend>
+      <ul>
+        <li>
+          <label for="name">선택한 과일 이름: </label>
+          <input type="text" id="name">
+        </li>
+        <li>
+          <label for="fruits">과일</label>
+          <select name="fruits" id="fruits">
+            <option value="">----- 선택 -----</option>
+            <option value="berry">딸기</option>
+            <option value="watermelon">수박</option>
+            <option value="miniberry">산딸기</option>
+          </select>
+        </li>
+        <li>
+          <label for="family">패밀리 사이트</label>
+          <select name="family" id="family">
+          <option value="">----- 패밀리 사이트 -----</option>
+          <option value="http://naver.com">네이버</option>
+          <option value="http://daum.net">다음</option>
+          <option value="http://nate.com">네이트</option>
+          </select>
+        </li>
+      </ul>
+    </fieldset>
+
+  </form><!--selectFrom-->
+
+
+</body>
+</html>

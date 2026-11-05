@@ -1,0 +1,95 @@
+
+/*-----------------------------*/
+
+.sign_up_section{
+  margin-bottom: 100px;
+}
+.sign_up_box{
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 50px;
+  border: 2px solid #eee;
+  box-sizing: border-box;
+  border-radius: 30px;
+  font-family: 'Pretendard', sans-serif;
+}
+.sign_up_box .title{
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.sign_up_box .terms_text{
+  margin-bottom: 40px;
+}
+
+.terms_container{
+  width: 650px;
+  border: 2px solid #eee;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.terms_container li{
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.total_terms_txt{
+  font-size: 20px;
+  font-weight: 500;
+}
+.terms_container li .fa-circle-check{
+  color: #999;
+  margin-right: 10px;
+}
+#total_terms, #terms01, #terms02, #terms03, #terms04, #terms05, #terms06{display: none;}
+
+.total_terms i{font-size: 24px;}
+.terms_chk{font-size: 20px;}
+.terms_container li:first-child{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+.terms_container li .info_btn{
+  background-color: white;
+  border: 1px solid #B94040;
+  color: #B94040;
+  font-weight: 500;
+  padding: 3px;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.join_btn{
+  width: 650px;
+  height: 45px;
+  margin: 20px 0;
+  border: none;
+  background-color: #B94040;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.essential_txt{
+  color: #B94040;
+  font-weight: 500;
+}
+.choice_txt{
+  color: #999;
+  font-weight: 500;
+}
+.terms_el:checked + .terms_chk i{
+  color:#B94040;
+}
+
+
+.quick_menu,
+.top_btn{
+  display: block;
+}

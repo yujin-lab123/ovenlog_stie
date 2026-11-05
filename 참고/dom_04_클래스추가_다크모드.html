@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript_다크모드</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      const btn = document.querySelector('.btn');
+      const text = document.querySelector('.text');
+
+      btn.onclick = function(){
+        if(text.classList.contains('dark_mode')){ //hasClass랑 같은 코드. 클래스의 유무를 확인함.
+          text.classList.remove('dark_mode');
+          btn.textContent = '다크 모드'; //요즘 트렌드인 코드. text 내용을 바꿀 때 씀.
+        }else{
+          text.classList.add('dark_mode');
+          btn.textContent = '라이트 모드';
+        } //dom_03참고. 따로 선언하고 호출하지 않고, 이렇게 바로 function줘도 된다.
+      }
+
+
+
+    }); //DOMContentLoaded
+
+  </script>
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    .btn{
+      width: 300px; height: 30px;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+
+    .text{
+      width: 600px; height: 700px;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      text-align: justify;
+      text-indent: 16px;
+      margin-top: 10px;
+    }
+
+    .dark_mode{
+      background-color: black;
+      color: white;
+    }
+
+  </style>
+
+</head>
+<body>
+  <button class="btn">다크모드</button>
+
+  <div class="text">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.</p><p>Senectus et netus et malesuada. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Neque convallis a cras semper auctor. Libero id faucibus nisl tincidunt eget. Leo a diam sollicitudin tempor id. A lacus vestibulum sed arcu non odio euismod lacinia. In tellus integer feugiat scelerisque. Feugiat in fermentum posuere urna nec tincidunt praesent. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Et malesuada fames ac turpis egestas sed. Sit amet nisl suscipit adipiscing bibendum est ultricies. Arcu ac tortor dignissim convallis aenean et tortor at. Pretium viverra suspendisse potenti nullam ac tortor vitae purus. Eros donec ac odio tempor orci dapibus ultrices. Elementum nibh tellus molestie nunc. Et magnis dis parturient montes nascetur. Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.</p><p>Sit amet nulla facilisi morbi tempus. Nulla facilisi cras fermentum odio eu. Etiam erat velit scelerisque in dictum non consectetur a erat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ut sem nulla pharetra diam. Fames ac turpis egestas maecenas. Bibendum neque egestas congue quisque egestas diam. Laoreet id donec ultrices tincidunt arcu non sodales neque. Eget felis eget nunc lobortis mattis aliquam faucibus purus. Faucibus interdum posuere lorem ipsum dolor sit.</p>
+  </div>
+
+
+</body>
+</html>

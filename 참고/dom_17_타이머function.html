@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+/*
+      const btnStart = document.querySelector('.btn_start');
+      const btnStop = document.querySelector('.btn_stop');
+      const viewBox = document.querySelector('.view_box');
+
+      let timer;
+      let cnt = 0;
+
+      btnStart.addEventListener('click', () => {
+        timer = setInterval(function(){
+          cnt++;
+          viewBox.textContent = cnt;
+        }, 100);
+      }) //btn_start
+
+      btnStop.addEventListener('click', () => {
+        clearInterval(timer);
+      })
+*/
+
+      //setInterval() / setTimeout() /clearInterval()
+
+      let cnt = 1;
+
+      let timer = setInterval(() => {
+        document.write(cnt, '<br>');
+        cnt++;
+
+        // if(cnt === 6){
+        //   document.write('타이머 종료');
+        //   clearInterval(timer);
+        // }
+
+      },1000); // timer 실행함수
+
+      setTimeout(function(){
+        document.write('타이머 종료');
+        clearInterval(timer);
+      }, 5000); //timer 종료함수 : 5초 후에 딱 한번만 실행 (setTimeout 딱 한번만 이벤트를 실행해야할 때 if문보다 setTimeout을 자주 사용함)
+
+
+
+    }); //DOMContentLoaded
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+
+    .btn{
+      width: 100px; height: 30px;
+    }
+    .view_box{
+      width: 300px; height: 300px;
+      border: 1px solid black;
+      background-color: palegoldenrod;
+      font-size: 30px;
+      text-align: center;
+      line-height: 300px;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+<!-- <button class="btn_start btn">start</button>
+<button class="btn_stop btn">stop</button>
+
+<div class="view_box">0</div> -->
+
+</body>
+</html>

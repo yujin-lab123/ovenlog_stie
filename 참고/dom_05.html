@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript_textContent</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      const welcome = document.querySelector('.welcome');
+      const bye = document.querySelector('.bye');
+      const text = document.querySelector('.text');
+
+      welcome.addEventListener('click', function(){
+        text.style.color = 'red';
+        text.textContent = '방문을 환영합니다!';
+        // text.innerText = '방문을 환영합니다~'; only텍스트만 가능해서 잘 안씀.
+      });//welcome이벤트
+
+      bye.addEventListener('click', function(){
+        text.innerHTML = '<a href="http://www.naver.com">다음에 또 방문해 주세요!</a>';
+        document.querySelector('.text a').style.color = 'blue'; //a태그는 클릭 이벤트로 새로 생긴 요소이기 때문에 따로 선언을 해줘서 style을 줘야함.
+      });
+
+    }); //DOMContentLoaded
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+    a{text-decoration: none; color: black;}
+
+    .text{
+      width: 500px; height: 300px;
+      border: 1px solid black;
+      text-align: center;
+      line-height: 300px;
+      font-size: 30px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+  
+<button class="welcome">Welcome</button>
+<button class="bye">Bye</button>
+
+<div class="text">버튼을 눌러주세요!</div>
+
+</body>
+</html>

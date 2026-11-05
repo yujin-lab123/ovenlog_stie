@@ -1,0 +1,275 @@
+/*------------common----------------*/
+
+/*--가격--*/
+.price{
+  text-align: right;
+  margin-top: 25px;
+}
+.old_price{
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  text-decoration: line-through;
+  color: #666;
+  line-height: 0;
+  text-align: right;
+  margin-bottom: 3px;
+}
+.discount{
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+  color: #B94040;
+}
+.new_price{
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+}
+/*--서브타이틀--*/
+.sub_title{
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  text-align: center;
+}
+/*--더하기>--*/
+.more a{
+  font-size: 12px;
+  color: #666;
+  float: right;
+}
+/*--해시태그--*/
+.GATGUUN{
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 3px 8px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 1px solid #B94040;
+  color: #B94040;
+}
+.NEW{
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 3px 8px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 1px solid #9B40B9;
+  color: #9B40B9;
+}
+.BEST{
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 3px 8px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 1px solid #4078B9;
+  color: #4078B9;
+}
+
+/*------------common----------------*/
+
+.side_quick_menu{
+  width: 1070px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.side_quick_menu .home_icon{
+  width: 15px; height: 15px;
+}
+.side_quick_menu .home_icon img{
+  width: 100%; height: 100%;
+}
+.side_quick_menu .sub_menu_angle{
+  width: 10px; height: 10px;
+  margin-left: 10px;
+}
+.side_quick_menu .sub_menu_angle img{
+  width: 100%; height: 100%;
+}
+
+.side_quick_menu p{
+  margin-left: 10px;
+}
+
+/*-------------/side_quick_menu-------------------*/
+
+.wrap{
+  width: 1070px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+/*============================*/
+/* .wrap img{width: 100px; height: 100px;} */
+/*============================*/
+
+.wrap .sub_title{
+  margin: 0 auto 50px;
+  margin-top: 50px;
+}
+.mypage_main{
+  width: 1070px; height: 200px;
+  display: flex;
+  align-items: center;
+  /* background-image: url(../images/sub_page/background.jpg); */
+  border: 1px solid #B94040;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 30px 100px;
+}
+.mypage_profile_box{
+  width: 40%;
+  display: flex;
+}
+.mypage_profile_box .profile_img{
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.mypage_profile_box .profile_img img{
+  width: 100%; height: 100%;
+}
+.mypage_point_box{
+  width: 60%;
+}
+.mypage_hello{
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding-top: 30px;
+  margin-left: 10px;
+}
+.mypage_hello span:nth-child(2){
+  font-size: 32px;
+}
+
+.mypage_point_box .point_box{
+  display: flex;
+  justify-content: end;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.mypage_point_box .point_box .point > span{
+  margin-right: 100px;
+}
+.grade span:nth-child(1),
+.point i{
+  font-size: 18px;
+}
+.grade span:nth-child(2),
+.point span{
+  color: #B94040;
+}
+.grade_map{
+  position: relative;
+}
+
+/*------------------------------------------*/
+
+.mypage_content_box{
+  width: 1070px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mypage_content{
+  width: 490px; 
+  margin-bottom: 50px;
+  /* background-color: #eee; */
+}
+.mypage_title{
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.mypage_title .more a{
+  line-height: 35px;
+}
+.mp_content a{
+  display: flex;
+  margin-top: 20px;
+}
+.mp_content .mp_con_img{
+  width: 100px; height: 100px;
+}
+.mp_content img{
+  width: 100%; height: 100%;
+}
+.mp_con_text{
+  width: 300px; height: 100px;
+  margin-left: 10px;
+}
+.mp_con_text .new_price{
+  font-size: 20px;
+}
+.mp_con_text > p{
+  margin-bottom: 10px;
+}
+.mp_con_text .mp_old_price{
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  text-decoration: line-through;
+  color: #666;
+  line-height: 0;
+  text-align: right;
+  margin-bottom: 3px;
+}
+.mp_con_text .mp_new_price{
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+.mp_day{
+  font-size: 12px;
+  color: #999;
+}
+.mp_con_text .mp_minititle{
+  margin-bottom: 3px;
+}
+
+.older_history{
+  height: 420px;
+  overflow-y: auto;
+}
+.history_btn_box{
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.history_btn_box a{
+  display: block;
+  width: 140px;
+  border: 1px solid #999;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+.history_btn_box a:last-child{
+  border: 1px solid #B94040;
+  color: #B94040;
+}
+.mp_content:last-child .history_btn_box{
+  border-bottom: none;
+}
+
+
+
+
+
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+
+  <script>
+
+    //배열(Array) : unshift()(오른쪽으로 밀어서 맨 처음에 삽입) / push()(데이터 맨 뒤에 추가) / shift()(왼쪽으로 밀어서 삭제) / splice()(index번호를 저장해서 삽입, 삭제, 수정해줌) => 삽입, 삭제, 수정
+/*
+    const arr = new Array();
+
+    arr[0] = 23;
+    arr[1] = 47;
+    arr[2] = 12;
+    arr[3] = 78;
+    arr[arr.length] = 50;
+
+
+    for(let i=0; i<arr.length; i++){
+      document.write(arr[i], '<br>');
+    }
+*/
+/*
+    const arr = new Array(23, 47, 12, 78, 50);
+    
+    for(let i=0; i<arr.length; i++){
+      document.write(`${arr[i]} <br>`);
+    }
+*/
+
+    //const arr = [23, 47, 12, 78, 50];
+/*
+    for(let i in arr){
+      document.write(`${arr[i]} <br>`);
+    }
+*/ //in 은 첨자[]를 사용
+/*
+    for(let value of arr){
+      document.write(`${value} <br>`);
+    }
+    document.write(arr[0]);
+*/
+
+    const fruits = ['apple', 'kiwi', 'banana', 'melon'];
+
+    for(let i in fruits){
+      document.write(`${fruits[i]} &nbsp;&nbsp;`)
+    }
+    document.write(`<br><br>`);
+
+    fruits[0] = 'orange';
+    fruits.unshift('orange2');
+    fruits.push('mango');
+
+    fruits.shift(); //데이터 맨 앞을 삭제
+    fruits.pop(); //데이터 맨 뒤를 삭제
+
+    //fruits.splice(2,1); //splice(index번호, 삭제개수)를 삭제
+    let index = fruits.indexOf('banana'); //index번호 모를때 *************indexOF: 굉장히 중요.************
+    fruits.splice(index, 1);
+
+    fruits.splice(index, 0, 'cherry'); //이건 바나나를 체리로 변경해주는 것.
+
+    for(let fruit of fruits){
+      document.write(fruit, '&nbsp;&nbsp;');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+
+
+
+  </style>
+
+</head>
+<body>
+  
+
+
+</body>
+</html>

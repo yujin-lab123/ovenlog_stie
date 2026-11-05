@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      const btn = document.querySelector('.btn');
+      const textBox = document.querySelector('.box');
+
+      let state = false; //현재 .box의 css가 display: none;이니까 = false.
+
+      btn.addEventListener('click', () => {
+
+        if(state){
+          textBox.style.display = 'none';
+          state = false; //지금 보이는 상태의 if(state)문
+        } else{
+          textBox.style.display = 'block';
+          state = true;
+        } //지금 안보이는 상태의 else(state)문
+/*
+        if(state === false){
+        textBox.style.display = 'block';
+        state = true;
+      } else{
+        textBox.style.display = 'none';
+        state = false;
+      }*/
+
+      }); //addEventListener
+
+
+    }); //DOMContentLoaded
+
+  </script>
+  <style>
+
+    .box{
+      width: 300px; height: 300px;
+      border: 1px solid black;
+      background-color: #eee;
+      font-size: 30px;
+      text-align: center;
+      line-height: 300px;
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+  
+<button class="btn">Click</button>
+<div class="box">Text_box</div>
+
+</body>
+</html>

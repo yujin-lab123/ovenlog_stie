@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript_랜덤 숫자 추출/객체 데이터</title>
+
+  <script>
+
+    // let num = 0;
+
+    // for(let i=1; i<10; i++){
+    //   num= Math.floor(Math.random() * 45 + 1); //무작위로 숫자를 추출 = Math.random() + 1;
+    //   document.write(num, '<br>');
+    // }
+
+    // for(let i=1; i<=10; i++){
+    //   num = Math.floor(Math.random() * (150 - 120) + 120 + 1); //120 ~150 사이의 숫자를 랜덤 추출
+    //   document.write(num, '<br>');
+    // }
+
+
+    // 객체 데이터 : 속성, 메서드
+    // 키 : 키값 => 객체명['키'] or 객체명.키
+    // 메서드 : 함수 형태의 객체 데이터
+/*
+    const student = {
+      name: '홍길동',
+      class: '302호',
+      kor: 100,
+      eng: 95,
+    }
+
+    document.write(student['name'], '<br>');
+    document.write(student.class, '<br>');
+
+    student.mat = 90; //데이터 추가
+    document.write(student.mat, '<br>');
+
+    let sum = student.kor + student.eng + student.mat;
+    document.write('sum = ', sum, '<br>');
+
+    //document.write(student, '<br>');
+    //console.log(student);
+
+    delete student.kor; //데이터 삭제
+    console.log(student);
+
+    document.write(JSON.stringify(student), '<br>'); //객체데이터 파일(JSON파일).stringify(데이터 확인 함수)
+    document.write(JSON.stringify(student. null, 3), '<br>'); //앞에 빈칸 띄우기
+*/
+/*
+      const classinfo = {
+        name: 'Front_End',
+        hours: 8,
+        days: 119,
+        info: function(){
+          document.write(`${this.name} 클래스는 하루 ${this.hours}시간, ${this.days}일 과정입니다.`);
+        }
+      }
+
+      classinfo.info();
+*/
+/*
+    const tv = {
+      name: 'samsung',
+      width: '30cm',
+      height: '25cm',
+      weight: '20kg',
+      color: 'black',
+      on: function(start){
+        document.write(`${tv.name}, tv를 ${start}합니다. <br>`);
+      },
+      useTv: function(time){
+        document.write(`현재 시간은 ${time}시 입니다. <br>`);
+      },
+      off: function(time, end){
+        document.write(`${tv.color}인 tv는 ${time}에 자동으로 ${end}합니다.`);
+      },
+    } //tv_Object
+
+    tv.on('시작');
+
+    let cnt = 0;
+    let useTime = setInterval(() => {
+      tv.useTv(cnt);
+      cnt++;
+    }, 1000);
+
+    setTimeout(() => {
+      tv.off('오후 10시', '종료');
+      clearInterval(useTime);
+    }, 5000);
+*/
+
+    
+    //객체 생성자 함수
+/*
+    function classInfo(name, hours, days){
+
+      this.name = name,
+      this.hours = hours;
+      this.days = days;
+      this.info = function(){
+        document.write(`${this.name} 클래스는 하루 ${this.hours}, ${this.days}일 과정입니다. <br>`);
+      }
+    }
+
+    const subJect01 = new classInfo('Front_End', 8, 119);
+    const subJect02 = new classInfo('Design', 7, 76);
+    const subJect03 = new classInfo('UIUX', 6, 87);
+
+    console.log(JSON.stringify(subJect01, null, 2));
+    console.log(JSON.stringify(subJect02, null, 2));
+    console.log(JSON.stringify(subJect03, null, 2));
+
+    subJect01.info();
+    subJect02.info();
+    subJect03.info();
+*/
+/*
+    const fruits = ['사과', '망고', '딸기', '오렌지'];
+
+    for(let fruits of fruits){
+      document.write(fruits, '<br>');
+    }
+    document.write('<br>');
+
+    const sortfruits = fruits.sort(); //정렬함수.오름차순
+    //const sortfruits = fruits.sort().reverse(); //정렬함수.내림차순
+     
+    for(let fruit of fruits){
+      document.write(fruits, '<br>')
+    }
+*/
+
+    const fruits = [
+      {name: '사과', price: 1000},
+      {name: '딸기', price: 300},
+      {name: '망고', price: 700},
+      {name: '오렌지', price: 500},
+    ] //배열로 정의
+
+    //document.write(fruits[0].name);
+    //document.write(fruits[2].price);
+
+    for(let fruit of fruits){
+      document.write(JSON.stringify(fruit), '<br>');
+    }
+
+    document.write('<br>');
+
+    //const sortFruits = fruits.sort();
+/*
+    const sortFruits = fruits.sort((itemA, itemB) => {
+      return(itemA.price - itemB.price) // 숫자 오름차순 정렬
+     // return(itemA.price - itemB.price) * -1 // 숫자 내림차순 정렬
+    })
+*/
+
+    const sortFruit = fruits.sort((itemA, itemB) => {
+      if(itemA.name < itemB.name){
+        return 1;
+      }else if(itemA.name > itemB.name){
+        return -1;
+      }else{
+        return 0;
+      }
+    }) //문자 내림차순 정렬 (하드코딩)
+    
+/*
+    const sortFruit = fruits.sort((itemA, itemB) => {
+      if(itemA.name < itemB.name){
+        return -1;
+      }else if(itemA.name > itemB.name){
+        return 1;
+      }else{
+        return 0;
+      }
+    }) //문자 오름차순 정렬
+*/
+
+    for(let fruit of sortFruits){
+      document.write(JSON.stringify(fruit), '<br>');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+
+
+
+  </style>
+
+</head>
+<body>
+  
+
+
+</body>
+</html>

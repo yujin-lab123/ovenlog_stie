@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+  <script>
+
+    // lodash : 유틸리티 라이브러리(보조 라이브러리)
+    // _.sortBy(object, 'fieldName'); 
+    //_.sortBy(object, ['filedName', 'filedName', .......]);
+    //_.sortBy().reverse();
+
+    const fruits = [
+      {name: '사과', price: 1000},
+      {name: '딸기', price: 300},
+      {name: '딸기', price: 700},
+      {name: '망고', price: 700},
+      {name: '오렌지', price: 500},
+    ]
+  
+    for(let fruit of fruits){
+      document.write(JSON.stringify(fruit), '<br>');
+    }
+
+    document.write('<br>');
+
+    //const sortFruits = _.sortBy(fruits, 'name'); //name별 오름차순
+    //const sortFruits = _.sortBy(fruits, 'name').reverse(); //name별 내림차순
+
+    const sortFruits = _.sortBy(fruits, ['name', 'price']);
+
+    for(let fruit of sortFruits){
+      document.write(JSON.stringify(fruit), '<br>');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+
+
+
+  </style>
+
+</head>
+<body>
+  
+
+
+</body>
+</html>

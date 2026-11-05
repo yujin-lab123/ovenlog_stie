@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오븐로그 | 오븐에서 갓 구운빵</title>
+  <link rel="shortcut icon" href="./images/icon/olvenlog-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/sub_page.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="./css/notice_page.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+  <script src="./script.js"></script>
+  <style>
+    /*----------------------- default setting    --------------------------*/
+    *{margin: 0; padding: 0;}
+    li{list-style: none;}
+    a{color: black; text-decoration: none;}
+    img{display: block;}
+
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-Light.subset.woff2);
+      font-weight: 300;
+    }
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-Regular.subset.woff2);
+      font-weight: 400;
+    }
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-Medium.subset.woff2);
+      font-weight: 500;
+    }
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-SemiBold.subset.woff2);
+      font-weight: 600;
+    }
+    @font-face{
+      font-family: "Pretendard";
+      src: url(./font/Pretendard-1.3.9/web/static/woff2-subset/Pretendard-Bold.subset.woff2);
+      font-weight: 700;
+    }
+    /*----------------------- default setting    --------------------------*/
+    
+  </style>
+</head>
+<body>
+<header class="header">
+    <div class="header_box">
+      <div class="gnb_top_box">
+      <ul>
+        <li><a href="#!">로그인</a></li>
+        <li class="join"><a href="#!">회원가입</a>
+          <span class="join_event">+1000원</span>
+        </li>
+        <li><a href="./mypage.html">주문조회</a></li>
+        <li><a href="#!">고객센터</a></li>
+        <li class="shopping_cart"><a href="./mypage.html"><img src="./images/icon/shopping-bag_b1.png" alt="장바구니"></a></li>
+        <li><a href="./mypage.html"><img src="./images/icon/user1.png" alt="마이페이지"></a></li>
+      </ul>
+    </div>
+    
+    <div class="header_center_box">
+      <div class="search_box_top">
+          <input type="search" placeholder="어니언 베이글">
+          <div>
+            <a href="#!">
+              <img src="./images/icon/loupe.png" alt="돋보기">
+            </a>
+          </div>
+        </div>
+
+      <div class="logo_box">
+      <a href="./index.html">
+      <img src="./images/icon/ovenlog_logo2.jpg" alt="로고">
+      </a>
+      </div>
+
+      <div class="hotkey_box">
+          <ul>
+              <li><a href="#!">
+                <span class="rank">1.</span>
+                <span class="keyword">두바이쫀득쿠키</span>
+                <span class="rank_up">
+                <span>▲</span>
+                <span>98</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">2.</span>
+                <span class="keyword">딸기생크림샌드위치</span>
+                <span class="rank_down">
+                <span>▼</span>
+                <span>2</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">3.</span>
+                <span class="keyword">상하이버터떡</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">4.</span>
+                <span class="keyword">누텔라크로와상</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">5.</span>
+                <span class="keyword">레터링케이크</span>
+                <span class="rank_up">
+                <span>▲</span>
+                <span>15</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">6.</span>
+                <span class="keyword">소금빵</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">7.</span>
+                <span class="keyword">어니언베이글</span>
+                <span class="rank_down">
+                <span>▼</span>
+                <span>8</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">8.</span>
+                <span class="keyword">바질페스토샌드위치</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">9.</span>
+                <span class="keyword">우베무스케이크</span>
+                <span class="rank_up">
+                <span>▲</span>
+                <span>7</span>
+                </span>
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">10.</span>
+                <span class="keyword">애플파이</span>
+                <span class="rank_n">
+                <span>-</span>
+                </span> 
+              </a></li>
+              <li><a href="#!">
+                <span class="rank">1.</span>
+                <span class="keyword">두바이쫀득쿠키</span>
+                <span class="rank_up">
+                <span>▲</span>
+                <span>98</span>
+                </span>
+              </a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+<!-------/header_center_box------>
+
+    <nav class="gnb_box">
+      <ul>
+        <li class="ham_bar"><img class="ham_bar_on" src="./images/icon/main_bar.png" alt="햄버거바">
+          <div class="all_menu_box">
+            <div class="all_menu_left">
+              <div class="all_menu_list">
+                <div class="all_menu_category">
+                  <p><a href="#!">수제 빵🍞</a></p>
+                    <ul class="all_bread">
+                      <li><a href="">수제빵</a></li>
+                      <li><a href="#!">바게트</a></li>
+                      <li><a href="#!">식빵</a></li>
+                      <li><a href="#!">파이</a></li>
+                      <li><a href="#!">페스츄리</a></li>
+                      <li><a href="#!">건강빵(비건빵)</a></li>
+                      <li><a href="#!">샌드위치</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="#!">수제 과자🍪</a></p>
+                    <ul class="all_cookie">
+                      <li><a href="#!">단품쿠키</a></li>
+                  <li><a href="#!">쿠키슈</a></li>
+                  <li><a href="#!">마카롱</a></li>
+                  <li><a href="#!">브라우니</a></li>
+                  <li><a href="#!">스콘&머핀</a></li>
+                  <li><a href="#!">마들렌&휘낭시에</a></li>
+                  <li><a href="#!">쿠키세트</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="#!">수제 케이크🍰</a></p>
+                    <ul class="all_cake">
+                      <li><a href="#!">조각케이크</a></li>
+                  <li><a href="#!">홀케이크</a></li>
+                  <li><a href="#!">롤케이크</a></li>
+                  <li><a href="#!">레터링 케이크</a></li>
+                  <li><a href="#!">파운드 케이크</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="#!">수제 초콜릿🍫</a></p>
+                    <ul class="all_chocolate">
+                      <li><a href="#!">수제 초콜릿</a></li>
+                  <li><a href="#!">파베 초콜릿</a></li>
+                  <li><a href="#!">아망드 쇼콜라</a></li>
+                  <li><a href="#!">저당 초콜릿</a></li>
+                  <li><a href="#!">초콜릿 선물 세트</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="./sub_page.html" style="color: blue;">갓구움🔥</a></p>
+                  <ul class="all_custom">
+                      <li><a href="./sub_page.html" style="color: blue;">갓구움🔥</a></li>
+                    </ul>
+                </div>
+
+                <div class="all_menu_category">
+                  <p><a href="#!">맞춤추천</a></p>
+                    <ul class="all_custom">
+                      <li><a href="#!">답례품용</a></li>
+                  <li><a href="#!">생일/이벤트용</a></li>
+                  <li><a href="#!">피크닉용</a></li>
+                  <li><a href="#!">비건/저당용</a></li>
+                  <li><a href="#!">간식용</a></li>
+                  <li><a href="#!">식사대용</a></li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="all_menu_bottom_box">
+                <span><a href="#!">선물하기</a></span>
+                <span><a href="#!">정기배송</a></span>
+                <span><a href="#!">대량구매</a></span>
+              </div>
+            </div>
+
+            <div class="all_menu_right">
+              <div class="all_menu_content">
+                <p>NEW</p>
+                <div class="a_m_content">
+                  <a href="#!">
+                    <div class="a_m_img">
+                      <img src="./images/icon/header_new01.jpg" alt="상하이버터떡">
+                    </div>
+                    <div class="a_m_text">
+                      <p>상하이<br>버터떡</p>
+                      <p>(click)</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="a_m_content">
+                  <a href="#!">
+                    <div class="a_m_img">
+                      <img src="./images/icon/header_new02.jpg" alt="딸기생크림샌드위치">
+                    </div>
+                    <div class="a_m_text">
+                      <p>딸기 생크림<br>샌드위치</p>
+                      <p>(click)</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="all_menu_content">
+                <p>BEST</p>
+                <div class="a_m_content">
+                  <a href="#!">
+                    <div class="a_m_img">
+                      <img src="./images/icon/header_best01.jpg" alt="두바이쫀득모찌빵">
+                    </div>
+                    <div class="a_m_text">
+                      <p>두바이<br>쫀득 모찌빵</p>
+                      <p>(click)</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="a_m_content">
+                  <a href="#!">
+                    <div class="a_m_img">
+                      <img src="./images/icon/header_best02.jpg" alt="과일롤케이크">
+                    </div>
+                    <div class="a_m_text">
+                      <p>5가지<br>과일 롤케이크</p>
+                      <p>(click)</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </li>
+        <li class="gnb_bread"><a href="#!">수제 빵</a>
+          <ul class="sub_gnb">
+            <li><a href="./sub_page.html">수제빵</a></li>
+            <li><a href="#!">바게트</a></li>
+            <li><a href="#!">식빵</a></li>
+            <li><a href="#!">파이</a></li>
+            <li><a href="#!">페스츄리</a></li>
+            <li><a href="#!">건강빵(비건빵)</a></li>
+            <li><a href="#!">샌드위치</a></li>
+          </ul>
+        </li>
+        <li class="gnb_cookie"><a href="#!">수제 쿠키</a>
+          <ul class="sub_gnb">
+            <li><a href="#!">단품쿠키</a></li>
+            <li><a href="#!">쿠키슈</a></li>
+            <li><a href="#!">마카롱</a></li>
+            <li><a href="#!">브라우니</a></li>
+            <li><a href="#!">스콘&머핀</a></li>
+            <li><a href="#!">마들렌&휘낭시에</a></li>
+            <li><a href="#!">쿠키세트</a></li>
+          </ul>
+        </li>
+        <li class="gnb_cake"><a href="#!">수제 케이크</a>
+          <ul class="sub_gnb">
+            <li><a href="#!">조각케이크</a></li>
+            <li><a href="#!">홀케이크</a></li>
+            <li><a href="#!">롤케이크</a></li>
+            <li><a href="#!">레터링 케이크</a></li>
+            <li><a href="#!">파운드 케이크</a></li>
+          </ul>
+        </li>
+        <li class="gnb_choco"><a href="#!">수제 초콜릿</a>
+          <ul class="sub_gnb">
+            <li><a href="#!">수제 초콜릿</a></li>
+            <li><a href="#!">파베 초콜릿</a></li>
+            <li><a href="#!">아망드 쇼콜라</a></li>
+            <li><a href="#!">저당 초콜릿</a></li>
+            <li><a href="#!">초콜릿 선물세트</a></li>
+          </ul>
+        </li>
+        <li class="gnb_gotguum"><a href="./sub_page.html">갓구움🔥</a>
+        </li>
+        <li class="gnb_custom"><a href="#!">맞춤추천</a>
+          <ul class="sub_gnb">
+            <li><a href="#!">답레품용</a></li>
+            <li><a href="#!">생일/이벤트용</a></li>
+            <li><a href="#!">피크닉용</a></li>
+            <li><a href="#!">비건/저당용</a></li>
+            <li><a href="#!">간식용</a></li>
+            <li><a href="#!">식사대용</a></li>
+          </ul>
+        </li>
+        <li>        
+        <div class="search_box">
+          <input type="search" placeholder="어니언 베이글">
+          <div>
+            <a href="#!">
+              <img src="./images/icon/loupe.png" alt="돋보기">
+            </a>
+          </div>
+        </div>
+        </li>
+      </ul>
+    </nav>
+   </header>
+<!------------------/header------------------>
+
+<section class="side_quick_menu" id="notice_page_top">
+  <div class="home_icon">
+    <a href="./index.html">
+    <img src="./images/icon/home.png" alt="메인홈">
+    </a>
+  </div>
+  <div class="sub_menu_angle">
+    <img src="./images/icon/sub_menu.png" alt=">">
+  </div>
+  <select name="quick_side_menu" id="notice_event">
+    <option selected>NOTICE</option>
+    <option>EVENT</option>
+  </select>
+</section>
+
+<!----------/side_quick_menu--------------->
+
+<section class="all_notice_box"  id="header">
+
+  <input type="radio" name="notice" id="notice_btn" checked>
+  <input type="radio" name="notice" id="event_btn">
+
+  <div class="notice_tab_box">
+    <label for="notice_btn" class="btn_notice">NOTICE</label>
+    <label for="event_btn" class="btn_event">EVENT</label>
+  </div>
+
+  <div class="notice_page">
+    <p>공지사항</p>
+      <ul class="pin_list">
+        <li><details class="text_title">
+          <summary>
+            <span class="pin"><i class="fa-solid fa-thumbtack"></i></span>
+            <span>[이벤트] 매월 5일은 5ven Member's Day🎉</span>
+            <span>2026.05.05</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다.<br><br>고객 감사 이벤트인 5ven Member's Day를 개최합니다!<br>5ven Member's Day란, 매월 5일마다 고객님들에게 감사의 의미로 최대 50%할인쿠폰 및 배송비 무료쿠폰을 드리는 날입니다.🥰<br>잊지말고 매월 5일 혜택을 누리시길 바랍니다! 감사합니다💕
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="pin"><i class="fa-solid fa-thumbtack"></i></span>
+            <span>[공지] 자주 묻는 FQA 모음</span>
+            <span>2026.05.05</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다! <br><br>고객님들께서 자주 묻는 질문에 대한 답변을 보기 쉽게 모아서 매주 업데이트 되오니 꼭 확인 부탁드립니다! 감사합니다💕
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="pin"><i class="fa-solid fa-thumbtack"></i></span>
+            <span>[공지] 오븐로그 온라인 쇼핑몰 이용안내</span>
+            <span>2026.05.05</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다!<br><br>저희 오븐로그에 찾아와주신 모든 고객님께 감사인사 드립니다. <br>오븐로그는 매일 아침, 오븐 문이 열리는 순간부터 시작됩니다.<br><br>갓 구운 빵의 온기와 향기를 그대로 담아 고객님의 하루에 전해드리는 것이 목표입니다. 트렌디하고 건강한 재료로 만든 빵과 쿠키, 케이크 등 오늘의 구움 기록을 함께 써 내려가볼까요?🍞🔥
+          </div>
+        </details></li>
+      </ul>
+
+      <ul class="list_content_box">
+        <li><details class="text_title">
+          <summary>
+            <span class="title_tag">[공지]</span>
+            <span>⭐ 입금자 김희민님을 찾습니다.</span>
+            <span>2026.05.28</span>
+            </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다.<br><br>금일 5월 28일(목) 오후 3시 45분경 농협 계좌로 무통장 입금해주신 김희민 님을 찾습니다. 오븐로그 측에서 연락처로 연락을 드렸으나 연락이 원활히 닿지 않아 공지 드립니다. 결제 오류로 인해 주문서가 누락되었으니 김희민 님은 이 글을 보시는 즉시 오븐로그 고객센터로 연락주시기 바랍니다. <br>감사합니다!
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="title_tag">[공지]</span>
+            <span>[긴급] 서버 장애 조치 및 긴급 점검 안내</span>
+            <span>2026.05.17</span>
+            </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다.<br><br>일부 상품들의 결제 시스템이 일시적으로 오류를 일으키는 버그가 발생한 것이 발견되었습니다. 버그를 해결하기 위해 금일 새벽 3시, 사이트 전체 점검을 실시할 예정입니다. 점검 예상 시간은 총 3시간이며 부득이하게 연장될 수 있음을 미리 알려드립니다. <br>불편을 끼쳐드려 정말 죄송합니다. 감사합니다.
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="title_tag">[공지]</span>
+            <span>오븐로그 고객센터 전화상담 연결 지연 안내</span>
+            <span>2026.05.02</span>
+            </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다.<br><br>현재 고객센터 전화량이 증가하여 현재 연결이 지연되고 있습니다. 많은 관심에 감사드리며, 오븐로그 고객센터 직원들이 순차적으로 문의 전화를 해결하고 있으니 많은 양해 부탁드립니다. 감사합니다!
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="title_tag">[공지]</span>
+            <span>자주 묻는 FQA 모음</span>
+            <span>2026.0.10</span>
+            </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다! <br><br>고객님들께서 자주 묻는 질문에 대한 답변을 보기 쉽게 모아서 매주 업데이트 되오니 꼭 확인 부탁드립니다! 감사합니다💕
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="title_tag">[공지]</span>
+            <span>오븐로그 온라인 쇼핑몰 이용안내</span>
+            <span>2026.03.01</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다!<br><br>저희 오븐로그에 찾아와주신 모든 고객님께 감사인사 드립니다. <br>오븐로그는 매일 아침, 오븐 문이 열리는 순간부터 시작됩니다.<br><br>갓 구운 빵의 온기와 향기를 그대로 담아 고객님의 하루에 전해드리는 것이 목표입니다. 트렌디하고 건강한 재료로 만든 빵과 쿠키, 케이크 등 오늘의 구움 기록을 함께 써 내려가볼까요?🍞🔥
+          </div>
+        </details></li>
+      </ul>
+
+    <div class="page_btn_box">
+      <div class="page_btn_left">
+        <a href="#!" class="first_btn">
+          <i class="fa-solid fa-angles-left"></i>
+        </a>
+        <a href="#!" class="prev_btn">
+          <i class="fa-solid fa-angle-left"></i>
+        </a>
+      </div>
+
+      <div class="page_btn_number">
+        <a href="#!" class="page_01">1</a>
+      </div>
+
+      <div class="page_btn_right">
+        <a href="#!" class="next_btn">
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#!" class="last_btn">
+          <i class="fa-solid fa-angles-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+<!--------------------------------------> 
+  <div class="event_page">
+    <p>이벤트</p>
+      <ul class="pin_list">
+        <li><details class="text_title">
+          <summary>
+            <span class="pin"><i class="fa-solid fa-thumbtack"></i></span>
+            <span>[이벤트] 매월 5일은 5ven Member's Day🎉</span>
+            <span>2026.05.05</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다.<br><br>고객 감사 이벤트인 5ven Member's Day를 개최합니다!<br>5ven Member's Day란, 매월 5일마다 고객님들에게 감사의 의미로 최대 50%할인쿠폰 및 배송비 무료쿠폰을 드리는 날입니다.🥰<br>잊지말고 매월 5일 혜택을 누리시길 바랍니다! 감사합니다💕
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="pin"><i class="fa-solid fa-thumbtack"></i></span>
+            <span>[공지] 자주 묻는 FQA 모음</span>
+            <span>2026.05.05</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다! <br><br>고객님들께서 자주 묻는 질문에 대한 답변을 보기 쉽게 모아서 매주 업데이트 되오니 꼭 확인 부탁드립니다! 감사합니다💕
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="pin"><i class="fa-solid fa-thumbtack"></i></span>
+            <span>[공지] 오븐로그 온라인 쇼핑몰 이용안내</span>
+            <span>2026.05.05</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다!<br><br>저희 오븐로그에 찾아와주신 모든 고객님께 감사인사 드립니다. <br>오븐로그는 매일 아침, 오븐 문이 열리는 순간부터 시작됩니다.<br><br>갓 구운 빵의 온기와 향기를 그대로 담아 고객님의 하루에 전해드리는 것이 목표입니다. 트렌디하고 건강한 재료로 만든 빵과 쿠키, 케이크 등 오늘의 구움 기록을 함께 써 내려가볼까요?🍞🔥
+          </div>
+        </details></li>
+      </ul>
+
+      <ul class="list_content_box">
+        <li><details class="text_title">
+          <summary>
+            <span class="title_tag">[이벤트]</span>
+            <span>카카오톡 친구 추가하면 5%추가 할인쿠폰을 드립니다!</span>
+            <span>2026.05.28</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다!<br><br>카카오톡에 “오븐로그”를 친구 추가하시면 그 즉시 5% 할인 쿠폰을 받을 수 있는 이벤트를 개최합니다!🎉 카카오톡 친구 추가에서 "오븐로그"를 추가해주시면 그 즉시 할인쿠폰을 발송해드립니다! <br>많은 관심 부탁드립니다. 감사합니다💕
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="title_tag">[이벤트]</span>
+            <span>오븐로그 SNS 해시태그 이벤트 개최</span>
+            <span>2026.05.21</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다!<br><br>금일 5월 21일(목)부터 6월 21일(일)까지 인스타그램에 오븐로그를 팔로우해주시는 분들 중 총 5분을 추첨하여 2만원 이상 구매시 30%할인 쿠폰을 증정해드립니다!🤩 <br><br>오븐로그 인스타그램을 팔로우한 후 디엠으로 팔로우한 캡쳐 사진을 보내주시면 자동 응모되며 2026.06.22(월)에 무작위 추첨을 통해 할인쿠폰을 개별로 전달드리겠습니다! <br>많은 관심 부탁드립니다. 감사합니다💕
+          </div>
+        </details></li>
+        <li><details class="text_title">
+          <summary>
+            <span class="title_tag">[이벤트]</span>
+            <span>매월 5일은 5ven Member's Day🎉</span>
+            <span>2026.05.05</span>
+          </summary>
+          <div class="text_body">
+            안녕하세요, 오븐로그입니다.<br><br>고객 감사 이벤트인 5ven Member's Day를 개최합니다!<br>5ven Member's Day란, 매월 5일마다 고객님들에게 감사의 의미로 최대 50%할인쿠폰 및 배송비 무료쿠폰을 드리는 날입니다.🥰<br>잊지말고 매월 5일 혜택을 누리시길 바랍니다! 감사합니다💕
+          </div>
+        </details></li>
+      </ul>
+
+    <div class="page_btn_box">
+      <div class="page_btn_left">
+        <a href="#!" class="first_btn">
+          <i class="fa-solid fa-angles-left"></i>
+        </a>
+        <a href="#!" class="prev_btn">
+          <i class="fa-solid fa-angle-left"></i>
+        </a>
+      </div>
+
+      <div class="page_btn_number">
+        <a href="#!" class="page_01">1</a>
+      </div>
+
+      <div class="page_btn_right">
+        <a href="#!" class="next_btn">
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#!" class="last_btn">
+          <i class="fa-solid fa-angles-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!------------footer--------------------->
+<footer class="footer">
+<div class="footer_box">
+  <div class="footer_left">
+    <div class="footer_logo">
+      <img src="./images/icon/ovenlog_logo2.jpg" alt="로고">
+    </div>
+    <p>법인명(상호): (주)오븐로그 | 주소: 02518 부산광역시 해운구 마린로 3길 베이킹산업센터 704호 오븐로그</p>
+    <p>대표자: 정유진 | 전화: 1588-7984 | 개인정보관리책임자: 정유진(cxgo@engin.kr)</p>
+    <p>사업자등록번호 264-87-42885 | 통신판매업신고 제 2025-해운마린-00652호<a href="#!">[사업자정보확인]</a></p>
+    <p>Copyright © 오븐로그. All right reserved.</p>
+    <p>고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG사의 구매안전 서비스를 이용하실 수 있습니다.<a href="#!">[서비스 가입사실 확인]</a></p>
+
+    <div class="footer_btn">
+      <span><a href="#!">단체주문·대량구매 관련 문의 ></a></span>
+      <span><a href="#!">정기배송·선물하기 관련 문의></a></span>
+    </div>
+  </div>
+
+  <div class="footer_right">
+    <p>| 고객센터</p>
+    <p>1588-7984</p>
+    <p>평일: 09:00 ~ 17:00</p>
+    <p>점심시간: 12:30 ~ 13:30</p>
+    <p>(주말 및 공휴일은 휴무입니다.)</p>
+  </div>
+</div>
+
+</footer>
+<!------------/footer--------------------->
+
+
+<!------------장바구니------------------------>
+<aside class="bottom_cart">
+  <input type="checkbox" id="bt_cart_on">
+
+  <label for="bt_cart_on"  class="bt_cart_text">
+    <span>장바구니</span>
+    <span><i class="fa-solid fa-chevron-up"></i></span>
+  </label>
+
+    <div class="bt_cart_content">
+    <div class="bt_cart_content_box">
+      <input type="checkbox" id="all_select">
+      <div>
+
+        <div class="bt_c_c_s_text">
+          <label for="all_select">
+            <i class="fa-regular fa-circle-check"></i>
+          </label>
+          <span>전체선택</span>
+          <span>선택삭제</span>
+          <span>전체삭제</span>
+        </div>
+
+      <div class="bt_c_c_s_product">
+        <input type="checkbox" name="product_select" id="product_select01">
+
+        <div class="cart_product">
+          <label for="product_select01">
+            <i class="fa-regular fa-circle-check"></i>
+          </label>
+          <div class="cart_product_img">
+            <img src="/images/cart/product (1).jpg" alt="카트01">
+          </div>
+          <div class="cart_product_text">
+            <i class="fa-solid fa-xmark"></i>
+            <p>[갓구움🔥]<br>천일염 소금빵 1개</p>
+            
+            <div class="count_price_box">
+              <div class="coupon">
+                <img src="./images/cart/coupon.png" alt="쿠폰">
+              </div>
+              <div class="count_box">
+                <button>-</button><span>5</span><button>+</button>
+              </div>
+              <div class="price">
+                <div class="old_price">16,000원</div>
+                <div class="new_price">15,200원</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bt_c_c_s_product">
+        <input type="checkbox" name="product_select" id="product_select02">
+
+        <div class="cart_product">
+          <label for="product_select02">
+            <i class="fa-regular fa-circle-check"></i>
+          </label>
+          <div class="cart_product_img">
+            <img src="/images/cart/product (2).jpg" alt="카트02">
+          </div>
+          <div class="cart_product_text">
+            <i class="fa-solid fa-xmark"></i>
+            <p>[냉동배송🧊]<br>피크닉 브런치 밀키트</p>
+            
+            <div class="count_price_box">
+              <div class="coupon">
+                <img src="./images/cart/coupon.png" alt="쿠폰">
+              </div>
+              <div class="count_box">
+                <button>-</button><span>1</span><button>+</button>
+              </div>
+              <div class="price">
+                <div class="old_price">32,000원</div>
+                <div class="new_price">25,600원</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="bt_cart_pay_box">
+        <div class="b_c_pay_box">
+          <p>결제예정금액</p>
+
+          <div class="pay_price">
+            <div>
+              <span>상품금액</span>
+              <span class="new_price">48,000원</span>
+            </div>
+            <div>
+              <span>배송비<span style="font-size: 10px;">(3만원 이상 무료배송)</span></span>
+              <span class="new_price">+3,000원</span>
+            </div>
+            <div>
+              <span>할인금액</span>
+              <span class="new_price">-4,200원</span>
+            </div>
+          </div>
+          <div class="total_price">
+            <span>총 결제예정금액</span>
+            <span class="new_price">43,800원</span>
+          </div>
+
+          <div class="pay_btn">
+            <p><a href="#!">주문하기</a></p>
+            <p><a href="#!"><img src="./images/cart/npay.png" alt="npay구매"></a></p>
+            <p><a href="#!">선물하기</a></p>
+            <p><a href="#!">정기배송</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<!---------/장바구니(bottom_cart)-------------->
+
+
+<!--사이드퀵메뉴-->
+
+<aside class="quick_menu">
+  <div class="quick_heart">
+    <a href="./mypage.html">
+    <img class="quick_heart_off" src="./images/icon/quick_heart.png" alt="즐겨찾기">
+    <img class="quick_heart_hover" src="./images/icon/quick_heart_click.png" alt="즐겨찾기hover">
+    </a>
+  </div>
+  <div class="quick_cart">
+    <a href="./mypage.html">
+    <img class="quick_cart_off" src="./images/icon/quick_cart.png" alt="장바구니">
+    <img class="quick_cart_hover" src="./images/icon/quick_cart_click.png" alt="장바구니hover">
+    </a>
+  </div>
+  <div class="viewed_item">
+    <p>Viewd</p>
+    <div>
+      <div class="viewed_item_img">
+      <a href="./detail_page.html">
+      <img src="./images/product_img/new (2).jpg" alt="에그타르트">
+      </a>
+      </div>
+      <div class="quick_btn">
+        <i class="fa-solid fa-angle-left"></i>
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+      <p style="font-size: 10px;">(1/3)</p>
+      <p><a href="./mypage.html">전체보기</a></p>
+    </div>
+  </div>
+
+  <div class="top_btn">
+    <a href="#header">
+    <img src="./images/icon/top_btn.jpg" alt="top버튼">
+    </a>
+  </div>
+</aside>
+<!--/사이드퀵메뉴-->

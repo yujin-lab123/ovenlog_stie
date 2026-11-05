@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+
+  <script>
+/*
+    let tv = new Object();
+
+    tv.width = 30;
+    tv.height = 25;
+    tv.weight = '20kg';
+    tv.color = 'white';
+
+    document.write(tv.width, '<br>');
+    document.write(tv.height, '<br>');
+    document.write(tv.width + tv.height, '<br>');
+
+    tv.off = function(){
+      document.write('전원off', '<br>');
+    }
+    tv.off(); //tv.off호출
+*/
+
+/*
+    //객체 생성자 함수
+
+    function Jumsu(st_name, kor, eng, mat){
+      this.name = st_name;
+      this.kor = kor;
+      this.eng = eng;
+      this.mat = mat;
+      //this.Sum = Sum;
+      //this.sum = kor + eng + mat;
+      this.Sum = function(){
+        document.write('총점 : ', this.kor + this.eng + this.mat, '<br>');
+      }
+      this.Aver = function(){
+        document.write('평균 : ', (this.kor + this.eng + this.mat) / 3, '<br>');
+      }
+    }
+    
+    //function sum();
+    //document.write('총점 : ', this.kor + this.eng + this.mat);
+
+    hong = new Jumsu('김영수', 90, 99, 90);
+    kim = new Jumsu('박영희', 100, 91, 100);
+
+    document.write('이름 : ', hong.name, '<br>');
+    document.write('국어 : ', hong.kor, '<br>');
+    document.write('영어 : ', hong.eng, '<br>');
+    document.write('수학 : ', hong.mat, '<br>');
+
+    //let sum = hong.kor + hong.eng + hong.mat;
+    //let aver = sum / 3;
+
+    //document.write('총점 : ', hong.sum(), '<br>');
+    //document.write('평균 : ', aver, '<br>');
+    hong.Sum();
+    hong.Aver();
+*/
+
+/*    
+    function TV(brand, name, price){
+      this.brand = brand;
+      this.name = name;
+      this.price = price;
+      this.Print = Print;
+    }
+    function Print(){
+      document.write('제조사 : ' + this.brand + '<br>');
+      document.write('제품명 : ', this.name + '<br>');
+      document.write('가격 : ', this.price + '<br>');
+    }
+*/
+/*
+    // 내장 객체 함수 : 자바스크립트에서 기본적으로 제공하는 객체
+    let today = new Date();
+    //document.write(today);
+    //console.log(today);
+
+    let nowYear = today.getFullYear();
+    //console.log(nowYear);
+
+    let nowMonth = today.getMonth() + 1; //0월부터 시작하기 때문에 +1을 해줘야함.
+    //console.log(nowMonth);
+
+    let nowDate = today.getDate();
+    let day = today.getDay();
+    //console.log(day);
+
+    let nowDay = '';
+
+    switch(day){
+      case 0: nowDay = '일요일'; break;
+      case 1: nowDay = '월요일'; break;
+      case 2: nowDay = '화요일'; break;
+      case 3: nowDay = '수요일'; break;
+      case 4: nowDay = '목요일'; break;
+      case 5: nowDay = '금요일'; break;
+      case 6: nowDay = '토요일'; break;
+    }
+*/
+    //console.log(nowDay);
+/*
+    document.write(`<h1>오늘의 날자 정보 </h1>`);
+    document.write(`현재 년 : ${nowYear}년 <br>`);
+    document.write(`현재 월 : ${nowMonth}월 <br>`);
+    document.write(`현재 일 : ${nowDate}일 <br>`);
+    document.write(`현재 요일 : ${nowDay} <br>`);
+*/
+/*
+    let today = new Date();
+    let theDay = new Date('2026/09/18');
+   // console.log(theDay);
+
+   let diffDay = theDay.getTime() - today.getTime(); //날짜에서 날짜는 뺄 수 없음. 그래서 getTime(시간)으로 계산해야함.
+   console.log(theDay.getTime());
+   console.log(diffDay);
+
+   let day = Math.ceil(diffDay / (1000 * 60 * 60 * 24));
+   document.write(`종강일까지 남은 일수(토일요일 포함) : ${day}일`);
+*/
+
+    let today = new Date();
+    document.write(today, '<br>');
+
+    let setDay = new Date(today.setFullYear('2030'));
+    document.write(setDay);
+    
+
+
+
+
+
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+
+
+
+  </style>
+
+</head>
+<body>
+  
+<!-- <h3>객체만들기(메소드 정의)</h3>
+<script language="Javascript">
+TV1 = new TV('삼성', 'PAVV', '990,000만원');
+TV2 = new TV('LG', '엑스캔버스', '900,000만원');
+document.write('<h2>TV1</h2><p>');
+TV1.Print();
+document.write('<h2>TV2</h2><p>');
+TV2.Print(); -->
+
+</script>
+
+</body>
+</html>

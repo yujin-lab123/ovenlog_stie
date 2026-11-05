@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript_마우스오버(set/get함수)</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      const img = document.querySelector('.thumnail img');
+
+      img.addEventListener('mouseover', () => {
+        img.setAttribute('src', './images/spring_on.jpg');
+      });
+
+      img.addEventListener('mouseout', () => {
+        img.setAttribute('src', './images/spring_off.jpg');
+      }); //속성을 새로 가져올 때 set코드를 씀. (get은 원래 있는 함수를 가져올 때.)
+
+
+      // img.onmouseover = setoverImg;
+      // img.onmouseout = setoutImg;
+
+      // function setoverImg(){
+      //   img.src = './images/spring_on.jpg';
+      // }
+
+      // function setoutImg(){
+      //   img.src = './images/spring_off.jpg';
+      // }
+
+    }); //DOMContentLoaded
+
+  </script>
+
+</head>
+<body>
+  
+<div class="thumnail">
+  <img src="./images/spring_off.jpg" alt="mouse_out">
+</div>
+
+</body>
+</html>

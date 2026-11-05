@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      // const userId = document.getElementById('user_id').value; <- 이러면 let을 써야함.
+      const userId = document.getElementById('user_id');
+      const userPw1 = document.getElementById('user_pw1');
+      const userPw2 = document.getElementById('user_pw2');
+      const btnPw = document.querySelector('.btn_pw');
+      const telSecond = document.getElementById('tel_second');
+      const telThird = document.getElementById('tel_third');
+
+      // userId.onchange = checkId;
+      // userPw1.onchange = checkPw;
+
+      userId.addEventListener('change', checkId);
+      userPw1.addEventListener('change', checkPw);
+      btnPw.addEventListener('click', comparePw);
+      telSecond.addEventListener('keyup', moveTel);
+
+      function checkId(){
+        if(userId.value.length < 5 || userId.value.length > 16){
+          alert('사용할 수 없는 아이디입니다.');
+          userId.value = '';
+          userId.focus(); /*빈칸으로 잡힘(focusin과 구분)*/
+        }else{
+          alert('사용가능한 아이디입니다.');
+        }
+      }//checkId()
+
+      function checkPw(){
+        if(userPw1.value.length < 5){
+          alert('사용할 수 없는 비밀번호입니다.');
+          userPw1.select(); /*파란색 블럭이 잡힘(바로 수정가능) / 다음칸으로 넘기려면 userPw2.select();하면 됨.*/
+        }
+      }//checkPw()
+
+      function comparePw(){
+        if(userPw1.value !== userPw2.value){
+          alert('암호가 일치하지 않습니다.');
+          userPw2.select();
+        }
+      }//comparePw()
+
+      function moveTel(){
+        if(telSecond.value.length >= 4){
+          telThird.focus();
+        }
+      }//moveTel()
+      /*keydown이벤트는 사용성이 불편. 한 글자만 하려면 keyup이벤트를 걸어야함.*/
+
+
+    }); //DOMContentLoaded
+
+  </script>
+  <style>
+    *{margin: 0; padding: 0;}
+
+
+
+  </style>
+
+</head>
+<body>
+  
+<div class="join">
+  <h2>회원가입</h2>
+
+  <form action="">
+    <ul>
+      <li>
+        <label for="user_id">아이디</label>
+        <input type="text" id="user_id" class="user_id" placeholder="5~16자 입력" required autofocus>
+      </li>
+      <li>
+        <label for="user_pw1">비밀번호</label>
+        <input type="password" id="user_pw1" class="user_pw1" placeholder="5글자 이상 입력" required>
+      </li>
+      <li>
+        <label for="user_pw2">비밀번호 확인</label>
+        <input type="password" id="user_pw2" class="user_pw2">
+        <button type="button" class="btn_pw">비밀번호 확인</button>
+      </li>
+      <li>
+        <label for="user_tel">전화번호</label>
+
+        <select name="" id="tel_first">
+          <option value="010">010</option>
+          <option value="011">011</option>
+        </select>
+        <span> - </span>
+        <input type="text" id="tel_second" size="8" maxlength="4">
+        <span> - </span>
+        <input type="text" id="tel_third" size="8" maxlength="4">
+      </li>
+    </ul>
+  </form><!--join_form-->
+</div>
+
+</body>
+</html>
